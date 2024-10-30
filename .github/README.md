@@ -21,15 +21,17 @@ do script. Porém para uso em prod, é recomendado que altere o valor dos parâm
 # ==========================================================
 # ==== ALTERE AQUI ===== ALTERE AQUI ===== ALTERE AQUI =====
 
-# Exemplo para testes oi simulação:
-diretorio_base_fullpath="$PWD/alunos"
-git_config_padrao_fullpath="$PWD/.gitconfig"
-ssh_pasta_padrao_fullpath="$PWD/.ssh"
+# Exemplo para testes oi simulação (Windows com gitbash) FUCK MICROSOFT!:
+# > Caso em linux basta utilizar a variável $PWD ao inves desta gambiarra
+# diretorio_base_fullpath="$(cygpath.exe -m $PWD)/alunos"
+# git_config_padrao_fullpath="$(cygpath.exe -m $PWD)/.gitconfig"
+# ssh_pasta_padrao_fullpath="$(cygpath.exe -m $PWD)/.ssh"
 
-# Exemplo para ambiente de produção:
-# diretorio_base_fullpath="$HOME/documents/alunos"
-# git_config_padrao_fullpath="$HOME/.gitconfig"
-# ssh_pasta_padrao_fullpath="$HOME/.ssh"
+# Exemplo para ambiente de produção (Windows com gitbash) FUCK MICROSOFT!:
+# > Caso em linux basta utilizar a variável $HOME ao inves desta gambiarra
+diretorio_base_fullpath="$(cygpath.exe -m $USERPROFILE)/documents/alunos"
+git_config_padrao_fullpath="$(cygpath.exe -m $USERPROFILE)/.gitconfig"
+ssh_pasta_padrao_fullpath="$(cygpath.exe -m $USERPROFILE)/.ssh"
 
 # ==========================================================
 ```
@@ -105,3 +107,4 @@ chmod +x ./gitup.bash
 
 ### 4.2
 
+---
