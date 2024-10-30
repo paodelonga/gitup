@@ -138,7 +138,11 @@ git_config_usuario_template="
   insteadOf = git@github.com:
 
 [url \"$usuario_github.github.com:\"]
-  insteadOf = https://github.com:"
+  insteadOf = https://github.com:
+
+[credential]
+  helper = 'cache --timeout=2592000'
+"
 
 git_diretiva_template="
 [includeIf \"gitdir:$aluno_pasta_nome/**/\"]
